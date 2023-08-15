@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game">
+      <input type="text" id="taasanToo" />
+      <button onclick="utgaAwahFunkts()">taah</button>
+      <p class="games">hint: <span id="utga"></span></p>
+    </div>
+
+    <script>
+      const randomToo = Math.floor(Math.random() * 10000) + 1;
+      function utgaAwahFunkts() {
+        const taasanToo = document.getElementById("taasanToo").value;
+        const utga = document.getElementById("utga");
+        if (taasanToo < randomToo) {
+          utga.textContent = "Baga baina";
+        } else if (taasanToo > randomToo) {
+          utga.textContent = "Ih baina";
+        } else utga.textContent = "Bayr hurgie";
+      }
+    </script>
+  </body>
+</html>
